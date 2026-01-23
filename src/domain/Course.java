@@ -11,7 +11,6 @@ public class Course {
     public Course() {
     }
 
-    public Course(String department, int courseNum, int crn, int startTime, int endTime, Weekday[] meetingDays) {
         this.department = department;
         this.courseNum = courseNum;
         this.crn = crn;
