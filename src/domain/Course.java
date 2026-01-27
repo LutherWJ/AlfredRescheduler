@@ -6,17 +6,18 @@ public class Course {
     private int crn;
     private int startTime;
     private int endTime;
-    private Weekday meetingDays;
+    private Weekday[] meetingDays;
+    private Student[] students;
+    private Room room;
 
-    public Course() {
-    }
-
+    public Course(String department, int courseNum, int crn, int startTime, int endTime, Weekday[] meetingDays, Room room) {
         this.department = department;
         this.courseNum = courseNum;
         this.crn = crn;
         this.startTime = startTime;
         this.endTime = endTime;
         this.meetingDays = meetingDays;
+        this.room = room;
     }
 
     public String getDepartment() {
@@ -51,6 +52,14 @@ public class Course {
         this.startTime = startTime;
     }
 
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
+
+    public Student[] getStudents() {
+        return this.students;
+    }
+
     public int getEndTime() {
         return endTime;
     }
@@ -59,11 +68,19 @@ public class Course {
         this.endTime = endTime;
     }
 
-    public String getMeetingDays() {
+    public Weekday[] getMeetingDays() {
         return meetingDays;
     }
 
-    public void setMeetingDays(String meetingDays) {
+    public void setMeetingDays(Weekday[] meetingDays) {
         this.meetingDays = meetingDays;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
     }
 }

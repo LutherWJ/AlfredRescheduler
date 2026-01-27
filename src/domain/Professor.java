@@ -1,12 +1,12 @@
 package domain;
 
-public class Student {
+public class Professor {
     private String id;
     private String fname;
     private String lname;
     private Course[] courses;
 
-    public Student(String id, String fname, String lname, Course[] courses) {
+    public Professor(String id, String fname, String lname, Course[] courses) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
