@@ -42,7 +42,7 @@ public class RegistrationSystem {
     }
 
     public void addRoom(Room room) {
-        String key = room.getBuildingAddress() + "-" + room.getRoomNumber();
+        String key = room.getBuilding() + "-" + room.getRoomNumber();
         rooms.put(key, room);
     }
 

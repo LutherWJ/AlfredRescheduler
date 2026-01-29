@@ -3,24 +3,24 @@ package domain;
 import java.util.Objects;
 
 public class Room {
-    private String buildingAddress;
+    private String building;
     private int roomNumber;
     private String[] tags;
     private int seats;
 
-    public Room(String buildingAddress, int roomNumber, String[] tags, int seats) {
-        this.buildingAddress = buildingAddress;
+    public Room(String building, int roomNumber, String[] tags, int seats) {
+        this.building = building;
         this.roomNumber = roomNumber;
         this.tags = tags;
         this.seats = seats;
     }
 
-    public String getBuildingAddress() {
-        return buildingAddress;
+    public String getBuilding() {
+        return building;
     }
 
-    public void setBuildingAddress(String buildingAddress) {
-        this.buildingAddress = buildingAddress;
+    public void setBuilding(String building) {
+        this.building = building;
     }
 
     public int getRoomNumber() {
@@ -52,11 +52,11 @@ public class Room {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Room room = (Room) o;
-        return roomNumber == room.roomNumber && Objects.equals(buildingAddress, room.buildingAddress);
+        return roomNumber == room.roomNumber && Objects.equals(building, room.building);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(buildingAddress, roomNumber);
+        return Objects.hash(building, roomNumber);
     }
 }
