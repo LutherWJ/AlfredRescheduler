@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 public class Room {
     private String buildingAddress;
     private int roomNumber;
@@ -43,5 +45,18 @@ public class Room {
 
     public void setSeats(int seats) {
         this.seats = seats;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Room room = (Room) o;
+        return roomNumber == room.roomNumber && Objects.equals(buildingAddress, room.buildingAddress);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(buildingAddress, roomNumber);
     }
 }
