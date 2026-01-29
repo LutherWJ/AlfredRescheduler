@@ -1,5 +1,8 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
     private String department;
     private int courseNum;
@@ -7,10 +10,11 @@ public class Course {
     private int startTime;
     private int endTime;
     private Weekday[] meetingDays;
-    private Student[] students;
+    private List<String> enrolledStudentIds;
     private Room room;
+    private Professor professor;
 
-    public Course(String department, int courseNum, int crn, int startTime, int endTime, Weekday[] meetingDays, Room room) {
+    public Course(String department, int courseNum, int crn, int startTime, int endTime, Weekday[] meetingDays, Room room, Professor professor) {
         this.department = department;
         this.courseNum = courseNum;
         this.crn = crn;
@@ -18,6 +22,8 @@ public class Course {
         this.endTime = endTime;
         this.meetingDays = meetingDays;
         this.room = room;
+        this.professor = professor;
+        this.enrolledStudentIds = new ArrayList<>();
     }
 
     public String getDepartment() {
@@ -52,12 +58,12 @@ public class Course {
         this.startTime = startTime;
     }
 
-    public void setStudents(Student[] students) {
-        this.students = students;
+    public void setEnrolledStudentIds(List<String> enrolledStudentIds) {
+        this.enrolledStudentIds = enrolledStudentIds;
     }
 
-    public Student[] getStudents() {
-        return this.students;
+    public List<String> getEnrolledStudentIds() {
+        return this.enrolledStudentIds;
     }
 
     public int getEndTime() {
@@ -82,5 +88,13 @@ public class Course {
 
     public void setRoom(Room room) {
         this.room = room;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
     }
 }

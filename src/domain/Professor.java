@@ -4,9 +4,9 @@ public class Professor {
     private String id;
     private String fname;
     private String lname;
-    private Course[] courses;
+    private String[] courses;
 
-    public Professor(String id, String fname, String lname, Course[] courses) {
+    public Professor(String id, String fname, String lname, String[] courses) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
@@ -21,11 +21,11 @@ public class Professor {
         this.id = id;
     }
 
-    public String getFname() {
+    public String getfName() {
         return fname;
     }
 
-    public void setFname(String fname) {
+    public void setfName(String fname) {
         this.fname = fname;
     }
 
@@ -37,11 +37,11 @@ public class Professor {
         this.lname = lname;
     }
 
-    public Course[] getCourses() {
+    public String[] getCourses() {
         return courses;
     }
 
-    public void setCourses(Course[] courses) {
+    public void setCourses(String[] courses) {
         this.courses = courses;
     }
 }

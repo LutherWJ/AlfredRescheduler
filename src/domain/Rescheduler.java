@@ -1,27 +1,17 @@
 package domain;
 
+import java.util.List;
+
 public class Rescheduler {
-    private Room room;
-    private Course course;
-
-    public Rescheduler(Room room, Course course) {
-        this.room = room;
-        this.course = course;
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-
-    public Course getCourse() {
-        return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
+    
+    /**
+     * This method will contain the logic to reschedule courses.
+     * It uses the RegistrationSystem to access data.
+     */
+    public void reschedule(RegistrationSystem system) {
+        // Logic will go here:
+        // 1. Iterate through courses or students
+        // 2. Check conflicts
+        // 3. Find available rooms
     }
 }

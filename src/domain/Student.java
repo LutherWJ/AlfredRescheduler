@@ -1,16 +1,19 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
     private String id;
     private String fname;
     private String lname;
-    private Course[] courses;
+    private List<Integer> registeredCrns;
 
-    public Student(String id, String fname, String lname, Course[] courses) {
+    public Student(String id, String fname, String lname) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
-        this.courses = courses;
+        this.registeredCrns = new ArrayList<>();
     }
 
     public String getId() {
@@ -37,11 +40,11 @@ public class Student {
         this.lname = lname;
     }
 
-    public Course[] getCourses() {
-        return courses;
+    public List<Integer> getRegisteredCrns() {
+        return registeredCrns;
     }
 
-    public void setCourses(Course[] courses) {
-        this.courses = courses;
+    public void setRegisteredCrns(List<Integer> registeredCrns) {
+        this.registeredCrns = registeredCrns;
     }
 }
