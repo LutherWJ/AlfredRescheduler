@@ -1,24 +1,24 @@
 package domain;
 
 public class Room {
-    private String building;
+    private String buildingAddress;
     private int roomNumber;
     private String[] tags;
     private int seats;
 
-    public Room(String building, int roomNumber, String[] tags, int seats) {
-        this.building = building;
+    public Room(String buildingAddress, int roomNumber, String[] tags, int seats) {
+        this.buildingAddress = buildingAddress;
         this.roomNumber = roomNumber;
         this.tags = tags;
         this.seats = seats;
     }
 
-    public String getBuilding() {
-        return building;
+    public String getBuildingAddress() {
+        return buildingAddress;
     }
 
-    public void setBuilding(String building) {
-        this.building = building;
+    public void setBuildingAddress(String buildingAddress) {
+        this.buildingAddress = buildingAddress;
     }
 
     public int getRoomNumber() {
