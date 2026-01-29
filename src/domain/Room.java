@@ -3,24 +3,24 @@ package domain;
 import java.util.Objects;
 
 public class Room {
-    private String buildingAddress;
+    private String building;
     private int roomNumber;
     private String[] tags;
     private int seats;
 
-    public Room(String buildingAddress, int roomNumber, String[] tags, int seats) {
-        this.buildingAddress = buildingAddress;
+    public Room(String building, int roomNumber, String[] tags, int seats) {
+        this.building = building;
         this.roomNumber = roomNumber;
         this.tags = tags;
         this.seats = seats;
     }
 
-    public String getBuildingAddress() {
-        return buildingAddress;
+    public String building() {
+        return building;
     }
 
-    public void setBuildingAddress(String buildingAddress) {
-        this.buildingAddress = buildingAddress;
+    public void building(String building) {
+        this.building = building;
     }
 
     public int getRoomNumber() {
